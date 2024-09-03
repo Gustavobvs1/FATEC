@@ -7,6 +7,7 @@ public class Ex1002 {
         DecimalFormat df = new DecimalFormat("#.0000");
         double pi = 3.14159;
         double raio = scanner.nextDouble();
+        scanner.close();
 
         System.out.println("A=" + df.format(pi * (Math.pow(raio,2))));
     }

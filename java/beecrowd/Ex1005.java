@@ -8,6 +8,7 @@ public class Ex1005 {
 
         double num1 = scanner.nextDouble();
         double num2 = scanner.nextDouble();
+        scanner.close();
         String media = df.format(((num1 * 3.5) + (num2 * 7.5))/11);
 
         System.out.println("MEDIA = " + media);
