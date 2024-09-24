@@ -1,4 +1,4 @@
-package java;
+package listas;
 
 import java.util.Scanner;
 
@@ -8,6 +8,7 @@ public class Harmony {
         int n = scanner.nextInt();
         double sum = 0;
 
+        scanner.close();
         for (int i = 1; i <= n; i++) {
             sum += (1d/i);
         }

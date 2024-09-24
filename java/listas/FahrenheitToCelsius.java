@@ -12,6 +12,8 @@ public class FahrenheitToCelsius {
         Scanner scanner = new Scanner(System.in);
         double t1 = scanner.nextDouble();
 
+        scanner.close();
+
         System.out.println((t1 - 32) * 5/9);
     }
 }

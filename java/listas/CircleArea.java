@@ -8,6 +8,8 @@ public class CircleArea {
 
         double radius = scanner.nextDouble();
 
+        scanner.close();
+
         System.out.println(Math.PI * Math.pow(radius, 2));
     }
 }

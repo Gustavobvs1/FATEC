@@ -1,4 +1,4 @@
-package java;
+package listas;
 
 import java.util.Scanner;
 
@@ -14,6 +14,7 @@ public class Grow {
              n = scanner.nextInt();
              verify = n % 2 == 0;
         }
+        scanner.close();
 
         for (int i = 0; i <= n; i++) {
             if(i % 2 == 0) System.out.println(i);

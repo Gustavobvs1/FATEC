@@ -9,6 +9,8 @@ public class Hypotenuse {
         double cathet1 = scanner.nextDouble();
         double cathet2 = scanner.nextDouble();
 
+        scanner.close();
+
         double equation = Math.sqrt((Math.pow(cathet1, 2) + Math.pow(cathet2, 2)));
 
         System.out.println(equation);

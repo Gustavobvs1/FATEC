@@ -7,6 +7,8 @@ public class PredecessorSuccessor {
         Scanner scanner = new Scanner(System.in);
         int n1 = scanner.nextInt();
 
+        scanner.close();
+
         System.out.println(n1 - 1);
         System.out.println(n1 + 1);
     }

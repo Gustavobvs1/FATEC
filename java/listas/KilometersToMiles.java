@@ -13,6 +13,8 @@ public class KilometersToMiles {
         Scanner scanner = new Scanner(System.in);
         double kilo = scanner.nextDouble();
 
+        scanner.close();
+
         System.out.println(kilo/1.61);
     }    
 }

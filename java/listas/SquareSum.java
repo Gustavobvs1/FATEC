@@ -13,6 +13,8 @@ public class SquareSum {
         int n2 = scanner.nextInt();
         int n3 = scanner.nextInt();
 
+        scanner.close();
+
         System.out.println((Math.pow(n1, n2)) + (Math.pow(n2, 2)) + (Math.pow(n3,2)));
     }
 }

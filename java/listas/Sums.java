@@ -8,6 +8,8 @@ public class Sums {
 
         int n1 = scanner.nextInt();
 
+        scanner.close();
+
         int n2 = (n1 * 3) + 1;
 
         int n3 = (n1 * 2) - 1;
