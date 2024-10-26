@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="name">Nome completo</label>
+        <input type="text" name="name" id="name" />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+      </div>
+
+      <div>
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" />
+      </div>
+
+      <div>
+        <label for="date">Data de nascimento</label>
+        <input type="date" name="date" id="date" />
+      </div>
+      <br />
+
+      <div>
+        <label for="sexo">Sexo</label>
+        <div>
+          <label for="masculino">Masculino</label>
+          <input type="radio" name="sexo" id="masculino" value="masculino" />
+          <br />
+          <label for="feminino">Feminino</label>
+          <input type="radio" name="sexo" id="feminino" value="feminino" />
+        </div>
+      </div>
+      <br />
+
+      <div>
+        <label for="interests">Interesses</label>
+        <div>
+          <label for="physics">Física</label>
+          <input type="checkbox" name="interests" id="physics" /> <br />
+          <label for="chemistry">Química</label>
+          <input type="checkbox" name="interests" id="chemistry" /> <br />
+          <label for="math">Matemática</label>
+          <input type="checkbox" name="interests" id="math" /> <br />
+        </div>
+      </div>
+      <br />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
