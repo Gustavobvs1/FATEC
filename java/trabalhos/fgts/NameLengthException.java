@@ -1,4 +1,4 @@
-package fgts;
+package Fgts;
 
 class NameLengthException extends Exception {
     @Override

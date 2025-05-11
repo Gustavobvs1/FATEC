@@ -1,4 +1,4 @@
-package fgts;
+package Fgts;
 
 class NumberOnNameException extends Exception {
     @Override

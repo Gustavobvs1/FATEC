@@ -1,4 +1,4 @@
-package fgts;
+package Fgts;
 
 class MinSalaryException extends Exception {
     @Override

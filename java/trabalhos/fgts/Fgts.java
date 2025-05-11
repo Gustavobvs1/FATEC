@@ -1,4 +1,4 @@
-package fgts;
+package Fgts;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
