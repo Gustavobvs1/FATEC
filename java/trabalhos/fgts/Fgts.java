@@ -53,8 +53,6 @@ public class Fgts {
         System.out.print("\nInforme seu salário: ");
         double salary = scanner.nextDouble();
 
-        scanner.close();
-
         if (salary < 1518)
             throw new MinSalaryException();
 

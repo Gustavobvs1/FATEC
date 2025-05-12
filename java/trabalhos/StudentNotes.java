@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class StudentNotes {
@@ -45,6 +46,8 @@ public class StudentNotes {
 
             } catch (IndexOutOfBoundsException e) {
                 System.out.println("\n\nErro: Índice invalído ou lista vazia!");
+            } catch (NoSuchElementException e) {
+                System.out.println("\n\nErro: Digite um número valido!");
             }
         }
     }
@@ -54,7 +57,6 @@ public class StudentNotes {
         System.out.print("\nDigite o número do que deseja fazer: ");
         int option = scanner.nextInt();
 
-        scanner.close();
         return option;
     }
 
@@ -78,7 +80,6 @@ public class StudentNotes {
             System.out.print("Digite uma nota de 0 a 10: ");
             newNote = scanner.nextInt();
 
-            scanner.close();
         } while (newNote < 0 || newNote > 10);
 
         return newNote;
@@ -93,7 +94,6 @@ public class StudentNotes {
 
             System.out.println("\n" + notes.get(index));
 
-            scanner.close();
         } else
             System.out.println("\nLista vazia");
     }

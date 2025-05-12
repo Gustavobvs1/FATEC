@@ -3,7 +3,6 @@ package QuadraticEquation;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
 public class QuadraticEquation {
     public static void main(String[] args) {
         boolean runAgain = true;
@@ -51,7 +50,7 @@ public class QuadraticEquation {
             System.out.println("\nX1 = " + realNumber + " + " + imaginaryNumber + "i");
             System.out.println("\nX2 = " + realNumber + " - " + imaginaryNumber + "i");
 
-            double module = Math.sqrt(Math.pow(imaginaryNumber, 2) + Math.pow(realNumber, 2));
+            double module = Math.hypot(realNumber, imaginaryNumber);
 
             int angleX1 = (int) Math.floor(Math.toDegrees(Math.atan2(imaginaryNumber, realNumber)));
             int angleX2 = (int) Math.ceil(Math.toDegrees(Math.atan2(imaginaryNumber * -1, realNumber)));
