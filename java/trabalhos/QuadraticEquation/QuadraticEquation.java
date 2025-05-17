@@ -10,7 +10,7 @@ public class QuadraticEquation {
             try {
                 runAgain = false;
                 calculateRoots();
-            } catch (UnvalidEquationException e) {
+            } catch (InvalidEquationException e) {
                 System.out.println("Erro: " + e.getMessage());
                 runAgain = true;
             } catch (InputMismatchException e) {
@@ -20,14 +20,14 @@ public class QuadraticEquation {
         }
     }
 
-    public static void calculateRoots() throws UnvalidEquationException {
+    public static void calculateRoots() throws InvalidEquationException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("\nDigite o valor de a: ");
         int a = scanner.nextInt();
 
         if (a == 0)
-            throw new UnvalidEquationException();
+            throw new InvalidEquationException();
 
         System.out.print("\nDigite o valor de b: ");
         int b = scanner.nextInt();
