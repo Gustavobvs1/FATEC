@@ -11,13 +11,13 @@ public class InstitutionalEmail {
 
             if (!email.endsWith("@fatec.sp.gov.br"))
                 throw new InputMismatchException(
-                        "Erro: Email institucional Invalido! É necessário ter @fatec.sp.gov.br");
+                        "É necessário ter @fatec.sp.gov.br");
             if (Character.isDigit(email.charAt(0)))
-                throw new InputMismatchException("Erro: Email institucional Invalido! É necessário iniciar com letras");
+                throw new InputMismatchException("É necessário iniciar com letras");
 
             System.out.println("\nEmail valido! " + email);
         } catch (InputMismatchException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Erro: Email institucional Invalido! " + e.getMessage());
         }
     }
 }

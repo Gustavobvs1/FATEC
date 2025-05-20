@@ -1,4 +1,3 @@
-package CondominiumRegister;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -53,6 +52,7 @@ public class CondominiumRegister {
                     case "mercosul":
                         if (!validateMercosulSign(carSign))
                             throw new InputMismatchException("Placa Mercosul Invalida!");
+                        break;
 
                     case "tradicional":
                         if (!validateTraditionalSign(carSign))

@@ -66,7 +66,7 @@ public class Cpf {
     return Integer.parseInt(cpf.substring(8, 9)) == stateDigit;
   }
 
-  private static int getStateDigit(String state) {
+  public static int getStateDigit(String state) {
     switch (state) {
       case "DF":
       case "GO":
