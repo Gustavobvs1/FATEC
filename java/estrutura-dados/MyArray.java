@@ -178,6 +178,42 @@ public class MyArray {
         }
     }
 
+    private void heap(int[] array, int size, int i) {
+        int root = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+
+        if (left < size && array[left] > array[root]) {
+            root = left;
+        }
+        if (right < size && array[right] > array[root]) {
+            root = right;
+        }
+
+        if (root != i) {
+            int aux = array[i];
+            array[i] = array[root];
+            array[root] = aux;
+
+            heap(array, size, root);
+        }
+    }
+
+    public void heapSort() {
+        int n = size();
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            heap(array, n, i);
+        }
+
+        for (int i = n - 1; i > 0; i--) {
+            int aux = array[0];
+            array[0] = array[i];
+            array[i] = aux;
+
+            heap(array, i, 0);
+        }
+    }
+
     @Override
     public String toString() {
         // String s = "tamanho = " + array.length + "\nocupacao = " + occupation + "\n";
