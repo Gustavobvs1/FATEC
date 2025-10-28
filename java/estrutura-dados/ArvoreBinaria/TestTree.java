@@ -4,13 +4,12 @@ public class TestTree {
     public static void main(String[] args) {
         Tree newTree = new Tree();
         CompactTree compactTree = new CompactTree();
-        int[] array = new int[200];
         for (int i = 0; i < 200; i++) {
             Random random = new Random();
-            array[i] = random.nextInt(99);
+            int num = random.nextInt(99);
 
-            newTree.insertValue(array[i]);
-            compactTree.insertValue(array[i]);
+            newTree.insertValue(num);
+            compactTree.insertValue(num);
         }
 
         System.out.println(compactTree.inOrder());
