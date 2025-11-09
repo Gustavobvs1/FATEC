@@ -14,8 +14,10 @@ public class TestTree {
 
         System.out.println(compactTree.inOrder());
         System.out.println(compactTree.getHeight());
+        System.out.println(compactTree.countNodes());
         System.out.println("\n");
         System.out.println(newTree.inOrder());
         System.out.println(newTree.getHeight());
+        System.out.println(newTree.countNodes());
     }
 }
