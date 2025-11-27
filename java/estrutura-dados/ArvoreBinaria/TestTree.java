@@ -4,20 +4,14 @@ public class TestTree {
     public static void main(String[] args) {
         Tree newTree = new Tree();
         CompactTree compactTree = new CompactTree();
-        for (int i = 0; i < 200; i++) {
-            Random random = new Random();
-            int num = random.nextInt(99);
+        newTree.insertValue(20);
+        newTree.insertValue(32);
+        newTree.insertValue(15);
+        newTree.insertValue(5);
+        newTree.insertValue(17);
 
-            newTree.insertValue(num);
-            compactTree.insertValue(num);
-        }
-
-        System.out.println(compactTree.inOrder());
-        System.out.println(compactTree.getHeight());
-        System.out.println(compactTree.countNodes());
-        System.out.println("\n");
         System.out.println(newTree.inOrder());
-        System.out.println(newTree.getHeight());
-        System.out.println(newTree.countNodes());
+        System.out.println(newTree.countBetween(15, 30));
+        System.out.println(newTree.isBinary());
     }
 }

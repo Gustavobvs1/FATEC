@@ -22,7 +22,7 @@ public class List {
             first = newNode;
 
         else
-            newNode.setNext(last);
+            last.setNext(newNode);
 
         last = newNode;
 
@@ -58,6 +58,35 @@ public class List {
         last = currentNode;
         currentNode.setNext(null);
         return aux;
+    }
+
+    public void insertAt(int info, int index) {
+        Node newNode = new Node(info);
+
+        if (isEmpty()) {
+            first = newNode;
+            last = newNode;
+        } else if (index == 0) {
+            newNode.setNext(first);
+            first = newNode;
+        } else {
+
+            int i = 1;
+
+            Node currentNode = first;
+
+            while (i != index && currentNode != null) {
+                currentNode = currentNode.getNext();
+                i++;
+            }
+
+            if (i < index)
+                last.setNext(newNode);
+            else {
+                newNode.setNext(currentNode.getNext());
+                currentNode.setNext(newNode);
+            }
+        }
     }
 
     public int size() {

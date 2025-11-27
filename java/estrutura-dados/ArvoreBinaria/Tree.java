@@ -217,6 +217,52 @@ public class Tree {
 
         return sum += currentNode.getInfo();
     }
+
+    public int countBetween(int min, int max) {
+        if (isEmpty())
+            return 0;
+        return countBetweenRecursive(min, max, root);
+    }
+
+    private int countBetweenRecursive(int min, int max, Node currentNode) {
+        int i = 0;
+
+        if (currentNode.getInfo() >= min && currentNode.getInfo() <= max)
+            i++;
+
+        if (currentNode.getLeft() != null)
+            i += countBetweenRecursive(min, max, currentNode.getLeft());
+        if (currentNode.getRight() != null)
+            i += countBetweenRecursive(min, max, currentNode.getRight());
+
+        return i;
+    }
+
+    public boolean isBinary() {
+        if (isEmpty())
+            return false;
+
+        return isBinaryRecursive(root);
+    }
+
+    private boolean isBinaryRecursive(Node currentNode) {
+        boolean isBinary;
+
+        if (currentNode.getLeft() != null && currentNode.getRight() != null) {
+            isBinary = isBinaryRecursive(currentNode.getLeft());
+            if (isBinary)
+                isBinary = isBinaryRecursive(currentNode.getRight());
+        }
+
+        else if (currentNode.getLeft() == null && currentNode.getRight() == null)
+            isBinary = true;
+
+        else
+            isBinary = false;
+
+        return isBinary;
+    }
+
 }
 
 class Node {

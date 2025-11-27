@@ -1,5 +1,3 @@
-package PilhaLigada;
-
 public class Node {
     private int info;
     private Node next;

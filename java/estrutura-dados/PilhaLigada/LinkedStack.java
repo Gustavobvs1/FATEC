@@ -1,5 +1,3 @@
-package PilhaLigada;
-
 public class LinkedStack {
     private Node first;
 
@@ -34,6 +32,35 @@ public class LinkedStack {
             currentNode = currentNode.getNext();
         }
         return i;
+    }
+
+    public int find(int x) {
+        if (!isEmpty()) {
+            int i = 0;
+            Node currentNode = first;
+
+            while (currentNode != null) {
+                if (currentNode.getInfo() == x)
+                    return i;
+                i++;
+                currentNode = currentNode.getNext();
+            }
+        }
+        return -1;
+    }
+
+    public LinkedStack clone() {
+        LinkedStack newStack = new LinkedStack();
+        if (!isEmpty()) {
+            Node currentNode = first;
+
+            while (currentNode != null) {
+                newStack.push(currentNode.getInfo());
+                currentNode = currentNode.getNext();
+            }
+        }
+
+        return newStack;
     }
 
     @Override

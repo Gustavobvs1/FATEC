@@ -3,9 +3,10 @@ public class Product {
     private String name;
     private int stock;
 
-    public Product(int code, String name) {
+    public Product(int code, String name, int stock) {
         this.code = code;
         this.name = name;
+        this.stock = stock;
     }
 
     public int getCode() {

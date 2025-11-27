@@ -109,6 +109,26 @@ public class List<E> {
         return false;
     }
 
+    public void invert() {
+        if (!isEmpty()) {
+
+            Node<E> currentNode = first;
+            Node<E> temp = null;
+            // last = first;
+
+            while (currentNode != null) {
+                temp = currentNode.getBack();
+                currentNode.setBack(currentNode.getNext());
+                currentNode.setNext(temp);
+                currentNode = currentNode.getBack();
+            }
+
+            if (temp != null) {
+                first = temp.getBack();
+            }
+        }
+    }
+
     public int size() {
         int i = 0;
         Node<E> currentNode = first;

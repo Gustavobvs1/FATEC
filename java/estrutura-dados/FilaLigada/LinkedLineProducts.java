@@ -26,6 +26,33 @@ public class LinkedLineProducts {
         return temp;
     }
 
+    public Product findByName(String name) {
+        if (!isEmpty()) {
+            Node currentNode = first;
+            while (currentNode != null) {
+                if (currentNode.getInfo().getName() == name)
+                    return currentNode.getInfo();
+                currentNode = currentNode.getNext();
+            }
+        }
+
+        return null;
+    }
+
+    public int stockSum() {
+
+        if (isEmpty())
+            return 0;
+        Node currentNode = first;
+        int sum = 0;
+        while (currentNode != null) {
+            sum += currentNode.getInfo().getStock();
+            currentNode = currentNode.getNext();
+        }
+
+        return sum;
+    }
+
     @Override
     public String toString() {
         if (isEmpty())
